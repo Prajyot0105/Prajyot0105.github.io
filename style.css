@@ -62,8 +62,22 @@ body {
   color: var(--accent);
 }
 
+.site-nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+}
+
 .main-content {
   padding: 34px 0 26px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
 }
 
 .intro-grid {
