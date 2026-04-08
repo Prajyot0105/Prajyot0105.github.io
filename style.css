@@ -35,7 +35,7 @@ body {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 24px;
   padding: 18px 0;
 }
@@ -44,6 +44,20 @@ body {
   margin: 0;
   font-size: 2rem;
   letter-spacing: 0.05em;
+}
+
+.cv-button {
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.cv-button:hover {
+  filter: brightness(0.92);
 }
 
 .site-nav {
@@ -97,6 +111,7 @@ body {
 .profile-photo {
   display: block;
   width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
 }
@@ -105,6 +120,7 @@ body {
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .intro-text {
@@ -163,6 +179,10 @@ body {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cv-button {
+    margin-left: 0;
   }
 
   .intro-grid {
