@@ -5,37 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { transition: background-color 0.5s, color 0.5s; }
+        .dark-mode { background-color: #121212; color: white; }
+        .menu { display: none; }
+        .menu.active { display: block; }
+    </style>
 </head>
 <body>
-    <header>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <div class="hamburger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="section1">
-            <h2><img src="icons/icon1.png" alt="icon"> Section 1</h2>
-            <p>Content for section 1...</p>
-        </section>
-        <section id="section2">
-            <h2><img src="icons/icon2.png" alt="icon"> Section 2</h2>
-            <p>Content for section 2...</p>
-        </section>
-        <section id="section3">
-            <h2><img src="icons/icon3.png" alt="icon"> Section 3</h2>
-            <p>Content for section 3...</p>
-        </section>
-    </main>
+  <header>
+    <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+  </header>
+  <nav class="menu" id="hamburger-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Welcome to My Website</h1>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </main>
+  <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
+    const body = document.body;
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+    });
+
+    menuToggle.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
