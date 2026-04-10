@@ -84,6 +84,19 @@ body {
   padding-bottom: 4px;
 }
 
+.deploy-note-wrap {
+  background: #eaf3fb;
+  border-bottom: 1px solid #c9dff3;
+}
+
+.deploy-note {
+  margin: 0;
+  padding: 8px 0;
+  color: #1f4f7a;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .main-content {
   padding: 34px 0 26px;
 }
